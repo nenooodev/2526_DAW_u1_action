@@ -25,4 +25,9 @@ jobs:
         run: pip install pytest
 
       - name: Ejecutar script de tests y actualizar README
-        run: python update_readme.py >> new_README.md
+        run: python update_readme.py 
+      - name: Generar artefacto
+        uses: actions/upload-artifact@v3
+        with:
+          name: readme-artifact
+          
