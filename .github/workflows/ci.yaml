@@ -25,10 +25,4 @@ jobs:
         run: pip install pytest
 
       - name: Ejecutar script de tests y actualizar README
-        run: python update_readme.py
-
-      - name: Commit automático del README
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "Update README con estado de tests"
-          file_pattern: README.md
+        run: python update_readme.py >> new_README.md
