@@ -27,7 +27,7 @@ jobs:
       - name: Ejecutar script de tests y actualizar README
         run: python update_readme.py 
       - name: Generar artefacto
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v7
         with:
           name: readme-artifact
           
